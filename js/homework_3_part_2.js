@@ -6,7 +6,6 @@ let max = Number(100);
 let mean = (max + min)/2;
 
 for (let i = 0; i < 7; i++) {
-
 	if (confirm(`Ваше число больше ${mean}`)) {
 		min = mean;
 	} else {
