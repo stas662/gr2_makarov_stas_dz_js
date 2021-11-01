@@ -1,18 +1,18 @@
-let x = prompt('Enter the number',0);
+let x = prompt('Введите число ',0);
 x = Number(x);
 
 //Функция для расчёта 1, 2, 3, 4
 function funcTen (z) {
-	return ((x - z) % 10 == 0);
+	return ((Math.abs(x) - z) % 10 == 0);
 }
 
 //Функция для расчёта 11, 12, 13, 14
 function funcHundred (y) {
-	return ((x - y) % 100 == 0);
+	return ((Math.abs(x) - y) % 100 == 0);
 }
 
-if ( (x <= 0) ||  (!Number.isInteger(x))) {
-	alert('Введенное значение неверно!');
+if (!Number.isInteger(x)) {
+	alert('Введенное значение нельзя использовать для преобразования!');
 } else {
 	if (funcTen (1) && !funcHundred (11)) {
 		alert(x + ' день');
