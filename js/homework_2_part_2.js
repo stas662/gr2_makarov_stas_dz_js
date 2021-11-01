@@ -7,6 +7,7 @@ d = Number(d);
 const PI = 3.14;
 const INCH = 39370.1;
 
+//Перевод в км
 d = d / INCH; 
 
 if (d > n) {
