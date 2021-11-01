@@ -14,14 +14,12 @@ if (isNaN(numberOne) || isNaN(numberTwo)) {
 			if (numberTwo % 6 === 0) {
 				resultNumber += 1;
 			}
-			console.log(numberTwo);
 		}
 	} else {
 		for (; numberOne <= numberTwo; numberOne++) {
 			if (numberOne % 6 === 0) {
 				resultNumber += 1;
 			}
-			console.log(numberOne);
 		}
 	}
 alert(`Количество чисел кратных 6 = ${resultNumber} сумма этих чисел составляет = ${resultNumber * 6}`);
