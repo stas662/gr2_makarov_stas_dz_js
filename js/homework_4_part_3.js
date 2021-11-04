@@ -2,9 +2,6 @@ let word = prompt('Введите слово:');
 
 function vice_versa (string) {
 	let array = string.split('');
-
-	let i = string.length;
-	let j = 0;
 	let outgoing_array = new Array();
 
 	for (let i = 0; i < string.length; i++) {
