@@ -28,4 +28,4 @@ while (true) {
 	result++;
 }
 
-console.log(`Игра окончена. Ваши очки: ${result}`);
+alert(`Игра окончена. Ваши очки: ${result}`);
