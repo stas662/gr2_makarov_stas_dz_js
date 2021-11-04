@@ -1,20 +1,17 @@
-let arr = prompt('Введите слово:');
+let word = prompt('Введите слово:');
 
-function vice_versa (input_array) {
-	let array = input_array.split('');
+function vice_versa (string) {
+	let array = string.split('');
 
-	let i = input_array.length;
+	let i = string.length;
 	let j = 0;
 	let outgoing_array = new Array();
 
-	do {
-		i--;
-		outgoing_array[j] = input_array[i];
-		j++;
-	} while (j !== (input_array.length));
+	for (let i = 0; i < string.length; i++) {
+		outgoing_array.unshift(string[i]);
+	}
 	return outgoing_array;
 }
 
-let result_array = vice_versa(arr);
-let result = result_array.join('');
-console.log(result);
+let result = vice_versa(word); 
+console.log(result.join(''));
