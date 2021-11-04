@@ -23,7 +23,6 @@ function next_word(letter) {
 let result = 0;
 while (true) {
 	last_letter = next_word(last_letter); 
-	console.log(last_letter);
 	if (last_letter == 0) break;
 	result++;
 }
