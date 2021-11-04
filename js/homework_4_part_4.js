@@ -12,7 +12,7 @@ function next_word(letter) {
 	if (letter == first_letter) {
 		letter = array2[array2.length-1].toUpperCase();
 		return letter;
-	} else if (letter == 'Ь') || (letter == 'Ы') {
+	} else if ((letter == 'Ь') || (letter == 'Ы')) {
 		letter = array2[array2.length-2].toUpperCase();
 		return letter;
 	} else {
