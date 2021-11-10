@@ -15,6 +15,7 @@ function Calculator(calculatorName) {
 		if (typeof(element1) !== 'number' && typeof(element2) !== 'number') {
 			return true
 		}
+
 		return false;
 	}
 
@@ -26,6 +27,7 @@ function Calculator(calculatorName) {
 				return true;
 			}
 		}
+
 		return false;
 	}
 
@@ -97,9 +99,9 @@ function Calculator(calculatorName) {
 
 		if (array.length < 1) {
 			return false;
-		} else {
-			return true;
 		}
+
+		return true;
 	}
 
 	//Очистка
