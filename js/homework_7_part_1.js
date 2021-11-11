@@ -122,4 +122,5 @@ console.log(result.sum(5,5,10,21,0));
 console.log(result.subtraction(5,5));
 console.log(result.division(5,5));
 console.log(result.multiplication(5,5,6,5));
-
+console.log(actionHistory());
+console.log(clearHistory());
