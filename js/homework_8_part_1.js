@@ -1,4 +1,4 @@
-//Создаём элементы с голубым цветом размером 50х50`даём отсуп и выравниваем по центру страницы
+//Создаём элементы с голубым цветом размером 50х50 даём отсуп и выравниваем по центру страницы, что бы лучше было видно
 function createSquare() {
 
 	let divSquare = document.createElement('div');
@@ -9,13 +9,12 @@ function createSquare() {
 	divSquare.style.height = '50px';
 	divSquare.style.background = '#87CEEB';
 	divSquare.style.marginBottom = '5px';
-	divSquare.style.marginLeft = 'auto';
-	divSquare.style.marginRight = 'auto';
+	//divSquare.style.marginLeft = 'auto';
+	//divSquare.style.marginRight = 'auto';
 
 	document.body.append(divSquare);
 
 }
-
 
 //Перекрашиваем все элементы в зелёный цвет и меняем размер 100х100
 function changeСolor() {
@@ -26,7 +25,6 @@ function changeСolor() {
 		id[i].style.height = '100px';
 	}
 }
-
 
 //Перекрашиваем все элементы в жёлтый, но каждый 3 элемент делаем красным
 function changeElementColor() {
@@ -41,7 +39,6 @@ function changeElementColor() {
 	}
 }
 
-
 //Удаляем созданные элементы и устанавливаем чёрный фон
 function clearElements() {
 	document.body.style.background = '#000000';
@@ -51,7 +48,6 @@ function clearElements() {
 	}
 	
 }
-
 
 //Для проверки входных параметров
 let result = false;
@@ -73,7 +69,6 @@ function getSetTimeout(item, time) {
 
 	}, time * 1000);
 }
-
 
 getSetTimeout(createSquare, 3);
 getSetTimeout(changeСolor, 6);
