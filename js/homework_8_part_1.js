@@ -8,7 +8,9 @@ function createSquare() {
 	divSquare.style.width = '50px';
 	divSquare.style.height = '50px';
 	divSquare.style.background = '#87CEEB';
+	//Оступ надо задать так как элементы слипаются
 	divSquare.style.marginBottom = '5px';
+	//Не выравниваем по центру так как в задании такого небыло
 	//divSquare.style.marginLeft = 'auto';
 	//divSquare.style.marginRight = 'auto';
 
@@ -52,7 +54,7 @@ function clearElements() {
 //Для проверки входных параметров
 let result = false;
 
-//Вызов функций с таймером
+//Вызов функции с таймером
 function getSetTimeout(item, time) {
 	
 	if ((typeof(item) !== 'function') || (typeof(time) !== 'number') || (result)) {
