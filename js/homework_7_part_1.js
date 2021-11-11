@@ -1,3 +1,4 @@
+//Вывод истории всех калькулятров
 let array = [];
 
 function Calculator(calculatorName) {
@@ -32,6 +33,9 @@ function Calculator(calculatorName) {
 	}
 	
 	this.name = calculatorName;
+	
+	//Вывод истории одного калькулятров, но я вывожу историю для всех
+	//let array = [];
 	
 	//Сумма
 	this.sum = function(...arrg) {
@@ -119,8 +123,8 @@ let result = new Calculator('Мой калькулятор');
 let result2 = new Calculator('Ещё калькулятор');
 
 console.log(result.sum(5,5,10,21,0));
-console.log(result.subtraction(5,5));
-console.log(result.division(5,5));
+console.log(result2.subtraction(5,5));
+console.log(result2.division(5,5));
 console.log(result.multiplication(5,5,6,5));
 console.log(actionHistory());
 console.log(clearHistory());
