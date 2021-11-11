@@ -17,7 +17,8 @@ function random(min, max) {
 //Горизонтальное расположение двух блоков, что бы лучше их видеть
 let div = document.createElement('div'); 
 document.body.append(div);
-div.style.display = 'flex';
+//Убираем горизонтальное расположение так как в задании этого небыло
+//div.style.display = 'flex';
 
 //Что бы цвета не повторялись
 let duplicate = null;
@@ -50,12 +51,14 @@ function createRectangle() {
 	divRectangle.style.width = widthRectangle + 'px';
 	divRectangle.style.height = heightRectangle + 'px';
 	divRectangle.style.background = arrayColor[randomColorNumber];
-	divRectangle.style.marginLeft = 'auto';
-	divRectangle.style.marginRight = 'auto';
-
 	
-	div.append(divRectangle);
+	//Задаём отступ так как блоки слипаются
+	divRectangle.style.marginBottom = '5px';
+	//Этого тоже небыло
+	//divRectangle.style.marginLeft = 'auto';
+	//divRectangle.style.marginRight = 'auto';
 
+	div.append(divRectangle);
 
 	//Наведении курсора мыши
 	divRectangle.onmouseover = function() {
@@ -67,11 +70,8 @@ function createRectangle() {
 		alert(`Цвет этого прямоугольника ${arrayNameColor[randomColorNumber]}`)
 	}
 
-
 }
-
 
 for (let i = 0; i < 2; i++) {
 	createRectangle();
-	
 }
