@@ -8,6 +8,7 @@ function createSquare() {
 	divSquare.style.width = '50px';
 	divSquare.style.height = '50px';
 	divSquare.style.background = '#87CEEB';
+	
 	//Оступ надо задать так как элементы слипаются
 	divSquare.style.marginBottom = '5px';
 	//Не выравниваем по центру так как в задании такого небыло
