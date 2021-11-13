@@ -42,7 +42,6 @@ function createRectangle() {
 	let randomColorNumber = random(0, arrayColor.length);
 	
 	if (randomColorNumber === duplicate) {
-		console.log('1')
 		randomColorNumber = random(0, arrayColor.length);
 	}
 
@@ -67,7 +66,7 @@ function createRectangle() {
 
 	//Клик по элементу
 	divRectangle.onclick = function() {
-		alert(`Цвет этого прямоугольника ${arrayNameColor[randomColorNumber]}`)
+		alert(`Цвет этого прямоугольника ${arrayNameColor[randomColorNumber]}`);
 	}
 
 }
