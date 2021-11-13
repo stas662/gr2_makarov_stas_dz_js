@@ -62,16 +62,16 @@ function clearElements() {
 	
 }
 
-const SECOND = 1000;
+const MS_SECOND = 1000;
 
 setTimeout( function() {
 	for (let i = 0; i < number; i++) {
 		createSquare();
 	}
 
-}, SECOND * 2);
+}, MS_SECOND * 2);
 
-setTimeout(changeСolor, SECOND *  4);
-setTimeout(getNumber, SECOND *  6);
-setTimeout(changeElementColor, SECOND *  8);
-setTimeout(clearElements, SECOND *  10);
+setTimeout(changeСolor, MS_SECOND * 4);
+setTimeout(getNumber, MS_SECOND * 6);
+setTimeout(changeElementColor, MS_SECOND * 8);
+setTimeout(clearElements, MS_SECOND * 10);
