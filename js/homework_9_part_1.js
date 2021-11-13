@@ -1,10 +1,6 @@
-//Назначаем квадрату голубой цвет и задаём размер 70х70 пикселей
+//Создание квадрата голубого цвета размером 70х70 пикселей
 function createSquare() {
-	$('body').append('<div></div>'); 
-
-	$('div').attr({
-		'id':'square',
-	});
+	$('body').append('<div id="square"></div>'); 
 
 	$('div#square').css({
 		width: '70px',
@@ -23,7 +19,7 @@ function changeСolor() {
 	});
 }
 
-//Вывод на каждом квадрате его порядковый номер
+//Вывод на каждом квадрате порядкового номера
 function getNumber() {
 	$('div#square').text(function(index){
 		return index + 1;
