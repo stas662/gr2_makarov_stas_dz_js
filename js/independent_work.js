@@ -18,6 +18,12 @@ function changeСolor() {
 	let id = document.querySelectorAll('#square');
 	for (let i = 0; i < id.length; i++) {
 		id[i].style.background = '#800080';
+		id[i].style.color = '#FFFFFF';
+		id[i].style.display = 'flex';
+		id[i].style.flexDirection = 'column';
+		id[i].style.justifyContent = 'center';
+		id[i].style.textAlign = 'center';
+		id[i].style.textAlign = 'center';
 		id[i].style.minWidth = '10px'; 
 		id[i].style.minHeight = '10px';
 	}
@@ -35,19 +41,14 @@ function changeElementColor() {
 	let id = document.querySelectorAll('#square');
 	for (let i = 0; i < id.length; i++) {
 		id[i].style.background = '#FFFF00';
+		id[i].style.color = '#000000';
 		
 		if (((i + 1) % 3 === 0) && (i !== 0)) {
 			id[i].style.background = '#FF0000';
+			id[i].style.color = '#000000';
 		}
 		if (((i + 1) % 15 === 0) && (i !== 0)) {
-			id[i].style.background = 'transparent';
-			id[i].style.maxWidth = 0;
-		    id[i].style.maxHeight = 0;
-		    id[i].style.minWidth = 0;
-			id[i].style.minHeight = 0;
-		    id[i].style.borderLeft = '5px solid transparent';
-		    id[i].style.borderRight = '5px solid transparent';
-		    id[i].style.borderBottom = '10px solid #78866b';
+			id[i].style.background = 'linear-gradient(to right bottom, transparent 50%, #78866b 50%) left / 50% 100% no-repeat, linear-gradient(to left bottom, transparent 50%, #78866b 50%) right / 50% 100% no-repeat'
 		}
 	}
 }
