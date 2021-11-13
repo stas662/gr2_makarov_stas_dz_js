@@ -1,7 +1,9 @@
-//Вывод истории всех калькулятров
+//Для записи истории всех калькулятров
 let array = [];
 
 function Calculator(calculatorName) {
+	
+	this.name = calculatorName;
 	
 	//Получение даты и времени для каждого действия
 	function getDate() {
@@ -31,11 +33,6 @@ function Calculator(calculatorName) {
 
 		return false;
 	}
-	
-	this.name = calculatorName;
-	
-	//Вывод истории одного калькулятров, но я вывожу историю для всех
-	//let array = [];
 	
 	//Сумма
 	this.sum = function(...arrg) {
