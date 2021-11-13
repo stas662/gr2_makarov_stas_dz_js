@@ -23,7 +23,6 @@ function changeСolor() {
 		id[i].style.flexDirection = 'column';
 		id[i].style.justifyContent = 'center';
 		id[i].style.textAlign = 'center';
-		id[i].style.textAlign = 'center';
 		id[i].style.minWidth = '10px'; 
 		id[i].style.minHeight = '10px';
 	}
