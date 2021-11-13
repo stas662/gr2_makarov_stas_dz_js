@@ -1,4 +1,4 @@
-//Создаём элементы с голубым цветом размером 50х50 даём отсуп и выравниваем по центру страницы, что бы лучше было видно
+//Создаём элементы с голубым цветом размером 50х50 даём отсуп
 function createSquare() {
 
 	let divSquare = document.createElement('div');
@@ -11,10 +11,6 @@ function createSquare() {
 	
 	//Оступ надо задать так как элементы слипаются
 	divSquare.style.marginBottom = '5px';
-	//Не выравниваем по центру так как в задании такого небыло
-	//divSquare.style.marginLeft = 'auto';
-	//divSquare.style.marginRight = 'auto';
-
 	document.body.append(divSquare);
 
 }
@@ -38,7 +34,6 @@ function changeElementColor() {
 		if (((i + 1) % 3 === 0) && (i !== 0)) {
 			id[i].style.background = '#FF0000';
 		}
-
 	}
 }
 
@@ -52,28 +47,12 @@ function clearElements() {
 	
 }
 
-//Для проверки входных параметров
-let result = false;
-
-//Вызов функции с таймером
-function getSetTimeout(item, time) {
-	
-	if ((typeof(item) !== 'function') || (typeof(time) !== 'number') || (result)) {
-		result = true;
-		return null;
+setTimeout( function() {
+	for (let i = 0; i < 10; i++) {
+		createSquare();
 	}
-
-	result = false;
-
-	setTimeout( function() {
-		for (let i = 0; i < 10; i++) {
-			item();
-		}
-
-	}, time * 1000);
-}
-
-getSetTimeout(createSquare, 3);
-getSetTimeout(changeСolor, 6);
-getSetTimeout(changeElementColor, 9);
-getSetTimeout(clearElements, 12);
+	
+}, 3000);
+setTimeout(changeСolor, 6000);
+setTimeout(changeElementColor, 9000);
+setTimeout(clearElements, 12000);
