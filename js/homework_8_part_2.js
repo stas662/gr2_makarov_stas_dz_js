@@ -14,21 +14,18 @@ function random(min, max) {
 	return Math.floor(result);
 }
 
-//Горизонтальное расположение двух блоков, что бы лучше их видеть
-let div = document.createElement('div'); 
-document.body.append(div);
-//Убираем горизонтальное расположение так как в задании этого небыло
-//div.style.display = 'flex';
-
 //Что бы цвета не повторялись
 let duplicate = null;
 
 //Создаём элемент прямоугольник
 function createRectangle() {
-	
+
 	let divRectangle = document.createElement('div');
 	document.querySelector('#rectangle');
 	divRectangle.setAttribute('id', 'rectangle');
+	document.body.append(divRectangle);
+
+	console.log(divRectangle)
 
 	let widthRectangle = 0;
 	let heightRectangle = 0;
@@ -53,12 +50,7 @@ function createRectangle() {
 	
 	//Задаём отступ так как блоки слипаются
 	divRectangle.style.marginBottom = '5px';
-	//Этого тоже небыло
-	//divRectangle.style.marginLeft = 'auto';
-	//divRectangle.style.marginRight = 'auto';
-
-	div.append(divRectangle);
-
+	
 	//Наведении курсора мыши
 	divRectangle.onmouseover = function() {
 		console.log(`Ширина = ${this.style.width}, Высота = ${this.style.height}`);
