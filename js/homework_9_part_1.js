@@ -1,4 +1,4 @@
-//Создание квадрата голубого цвета размером 70х70 пикселей
+//Назначаем квадрату голубой цвет и задаём размер 70х70 пикселей
 function createSquare() {
 	$('body').append('<div id="square"></div>'); 
 
@@ -19,7 +19,7 @@ function changeСolor() {
 	});
 }
 
-//Вывод на каждом квадрате порядкового номера
+//Вывод на каждом квадрате его порядковый номер
 function getNumber() {
 	$('div#square').text(function(index){
 		return index + 1;
@@ -38,12 +38,7 @@ function changeElementColor() {
 
 		if (((i + 1) % 15 === 0) && (i !== 0)) {
 			$('div').eq(i).css({
-				background: 'transparent',
-				maxWidth: 0,
-				maxHeight: 0,
-				borderLeft: '50px solid transparent',
-				borderRight: '50px solid transparent',
-				borderBottom: '100px solid #78866b',
+				background: 'linear-gradient(to right bottom, transparent 50%, #78866b 50%) left / 50% 100% no-repeat, linear-gradient(to left bottom, transparent 50%, #78866b 50%) right / 51% 100% no-repeat',
 			})
 		}
 
