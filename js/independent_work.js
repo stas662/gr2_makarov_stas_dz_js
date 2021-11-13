@@ -41,11 +41,13 @@ function changeElementColor() {
 		}
 		if (((i + 1) % 15 === 0) && (i !== 0)) {
 			id[i].style.background = 'transparent';
-			id[i].style.minWidth = 0;
-		    id[i].style.minHeight = 0;
+			id[i].style.maxWidth = 0;
+		    id[i].style.maxHeight = 0;
+		    id[i].style.minWidth = 0;
+			id[i].style.minHeight = 0;
 		    id[i].style.borderLeft = '5px solid transparent';
 		    id[i].style.borderRight = '5px solid transparent';
-		    id[i].style.borderBottom = '5px solid #78866b';
+		    id[i].style.borderBottom = '10px solid #78866b';
 		}
 	}
 }
@@ -60,16 +62,16 @@ function clearElements() {
 	
 }
 
-let number = 1000;
+const SECOND = 1000;
 
 setTimeout( function() {
 	for (let i = 0; i < number; i++) {
 		createSquare();
 	}
 
-}, 2000);
+}, SECOND * 2);
 
-setTimeout(changeСolor, 4000);
-setTimeout(getNumber, 6000);
-setTimeout(changeElementColor, 8000);
-setTimeout(clearElements, 10000);
+setTimeout(changeСolor, SECOND *  4);
+setTimeout(getNumber, SECOND *  6);
+setTimeout(changeElementColor, SECOND *  8);
+setTimeout(clearElements, SECOND *  10);
