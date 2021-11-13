@@ -65,7 +65,7 @@ function clearElements() {
 const MS_SECOND = 1000;
 
 setTimeout( function() {
-	for (let i = 0; i < number; i++) {
+	for (let i = 0; i < 1000; i++) {
 		createSquare();
 	}
 
