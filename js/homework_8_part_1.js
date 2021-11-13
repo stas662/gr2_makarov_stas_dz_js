@@ -47,12 +47,15 @@ function clearElements() {
 	
 }
 
+const MS_SECOND = 1000;
+
 setTimeout( function() {
 	for (let i = 0; i < 10; i++) {
 		createSquare();
 	}
-	
-}, 3000);
-setTimeout(changeСolor, 6000);
-setTimeout(changeElementColor, 9000);
-setTimeout(clearElements, 12000);
+
+}, MS_SECOND * 3);
+
+setTimeout(changeСolor, MS_SECOND * 6);
+setTimeout(changeElementColor, MS_SECOND * 9);
+setTimeout(clearElements, MS_SECOND * 12);
