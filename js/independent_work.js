@@ -23,7 +23,7 @@ function changeСolor() {
 	}
 }
 
-function getNumber(numberSquare) {
+function getNumber() {
 	let id = document.querySelectorAll('#square');
 	for (let i = 0; i < id.length; i++) {
 		id[i].innerText = i + 1;
