@@ -1,3 +1,5 @@
+/*Напишите функцию get_day(date), которая возвращает день недели от задан-ной даты. Например: get_day(’27-11-1988’) должно вернуть «воскресенье»*/
+
 const MS_SECOND = 1000;
 const MS_MINUTE = MS_SECOND * 60;
 const MS_HOUR = MS_MINUTE * 60;
