@@ -1,3 +1,6 @@
+/*Напишите функцию get_count_days(date) , которая будет считать количество дней до Нового года от date, 
+  если оно задано, иначе посчитать количество дней от текущей даты*/
+
 const MS_SECOND = 1000;
 const MS_MINUTE = MS_SECOND * 60;
 const MS_HOUR = MS_MINUTE * 60;
