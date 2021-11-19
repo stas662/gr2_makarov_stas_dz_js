@@ -44,6 +44,9 @@ $(document).ready(function startGame() {
   $(block).click(function() {
     $(arrayCartridges[blunder]).remove();
     blunder = blunder + 1;
+    if (points !== 0) {
+      points = points - 1000;
+    }
   })
 
   function getGameStepTime () {
@@ -93,8 +96,10 @@ let win = 0;
         points = points + 1000 * win;
         lvl = lvl + 1;
 
-        if (lvl > 15) {
-          alert('Благодарю за прохождение игры и вручаю медаль героя! Этот подвиг навсегда вписан в летопись этой игры!');
+        if (lvl > 2) {
+          alert(`Благодарю за прохождение игры и вручаю медаль героя! 
+Этот подвиг навсегда будет вписан в летопись этой игры! 
+Ваши очки ${points}`);
           let newGame = confirm('Ссыграть ещё раз?');
           if (newGame) {
             lvl = 1;
