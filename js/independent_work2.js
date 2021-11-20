@@ -12,7 +12,6 @@ $(document).ready(function() {
 		}
 	}
 
-
 	let block = createBlock('body');
 	styleBlock(block, [`
 		display: flex;
@@ -24,8 +23,6 @@ $(document).ready(function() {
    		height: 450px;
    		border-radius: 50%;
    		border: 1px solid;
-   		
-   		
    	`]);
 
 let variableWidth = 10;
@@ -47,8 +44,8 @@ let j = 1;
 			   		left: 260px;
 			   		font-size: 18px;
 			   		padding: 5px;
-
 			   	`]);
+				
 			   	variableHeight = 100 - variableHeight;
 		   	} else {
 	   			styleBlock(number, [`
@@ -58,10 +55,9 @@ let j = 1;
 			   		font-size: 18px;
 			   		padding: 5px;
 			   	`]);
+				
 			   	variableWidth = 100 - variableWidth;
 		   	}
-
-
    		} else {
    			let circle = createBlock(block); 
    			let width = 'right';
@@ -91,8 +87,8 @@ let j = 1;
    					variableHeight2 = variableHeight2 - 13;
    				}
    			}
-
-   			circle.style.cssText =`
+			
+   			styleBlock(circle, [`
 		   		position: absolute;
 		   		${width}: ${variableWidth2}%;
 		   		${height}: ${variableHeight2}%;
@@ -100,7 +96,7 @@ let j = 1;
 		   		height: 20px;
 		   		border-radius: 50%;
 		   		border: 1px solid;
-		   	`
+		   	`]);
 		   	j++;
    		}
 
@@ -110,56 +106,55 @@ let j = 1;
 	let blockMinutes = createBlock(block);
 	let blockHour = createBlock(block);
 
-setInterval(() => {
-	let dateNow = new Date()
+	setInterval(() => {
+		let dateNow = new Date()
 
-   	let second = dateNow.getSeconds()
-   	let minutes = dateNow.getMinutes()
-   	let hour = dateNow.getHours()
+		let second = dateNow.getSeconds();
+		let minutes = dateNow.getMinutes();
+		let hour = dateNow.getHours();
 
-   	styleBlock(blockSecond, [`
-   		display: flex;
-   		position: absolute;
-   		align-items: center;
-   		border-radius: 50% 50% 0 0;
-   		top: 142px;
-   		margin-right: 5px;
-   		
-   		background: #333333;
-   		transform-origin: 100% 100%;	
-   		width: 5px;
-   		height: 150px;
-   		transform: rotateZ(${second * 6}deg);
-   		
-   	`]);
+		styleBlock(blockSecond, [`
+			display: flex;
+			position: absolute;
+			align-items: center;
+			border-radius: 50% 50% 0 0;
+			top: 142px;
+			margin-right: 5px;
 
-   	styleBlock(blockMinutes, [`
-   		display: flex;
-   		position: absolute;
-   		top: 173px;
-   		
-   		align-items: center;
-   		border-radius: 50% 50% 0 0;
-   		width: 6px;
-   		height: 120px;
-   		background: #333333;
-   		transform-origin: 100% 100%;
-   		transform: rotateZ(${minutes * 6}deg);
-   		
-   	`]);
+			background: #333333;
+			transform-origin: 100% 100%;	
+			width: 5px;
+			height: 150px;
+			transform: rotateZ(${second * 6}deg);
 
-   	styleBlock(blockHour, [`
-   		position: absolute;
-   		top: 215px;
-   		
-   		border-radius: 50% 50% 0 0;
-   		width: 8px;
-   		height: 80px;
-   		background: #333333;
-   		transform-origin: 100% 100%;
-   		transform: rotateZ(${hour * 30}deg);
-   		
-   	`]);
-   })
+		`]);
 
+		styleBlock(blockMinutes, [`
+			display: flex;
+			position: absolute;
+			top: 173px;
+
+			align-items: center;
+			border-radius: 50% 50% 0 0;
+			width: 6px;
+			height: 120px;
+			background: #333333;
+			transform-origin: 100% 100%;
+			transform: rotateZ(${minutes * 6}deg);
+
+		`]);
+
+		styleBlock(blockHour, [`
+			position: absolute;
+			top: 215px;
+
+			border-radius: 50% 50% 0 0;
+			width: 8px;
+			height: 80px;
+			background: #333333;
+			transform-origin: 100% 100%;
+			transform: rotateZ(${hour * 30}deg);
+
+		`]);
+   	})
 })
