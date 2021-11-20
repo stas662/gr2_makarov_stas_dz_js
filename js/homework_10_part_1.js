@@ -130,9 +130,13 @@ async function getBlockWithbButtonRemove(block) {
 		let index = $(this).parent().index();
 		arrayKey.splice(index-2, 1);
 
-		var parent = newBlockButtonRemove.parentNode;
-		var grand_father = parent.parentNode;
-		grand_father.removeChild(parent);
+		let confirmation = confirm('Вы точно хотите удалить?');
+
+		if (confirmation) {
+			var parent = newBlockButtonRemove.parentNode;
+			var grand_father = parent.parentNode;
+			grand_father.removeChild(parent);
+		}
 
 		//Проверка того, что ключ элемента так же удалился вмести с блоком
 		console.log(arrayKey);
