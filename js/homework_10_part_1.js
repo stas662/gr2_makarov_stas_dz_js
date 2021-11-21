@@ -10,7 +10,7 @@
 
 //Примечание, с условием намного удобнее нужно будет его добавить во все работы
 
-$(document).ready(async function(){
+$(document).ready(function(){
 	fetch('https://jsonplaceholder.typicode.com/users')
 	.then((response) => response.json())
 	.then((json) => {
