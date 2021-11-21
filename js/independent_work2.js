@@ -1,3 +1,5 @@
+//Часы
+
 $(document).ready(function() {
 
 	function createBlock(nameParent) {
